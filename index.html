@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://api.fontshare.com/v2/css?f[]=nippo@400&f[]=technor@500&f[]=montserrat@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body style="background: rgb(0,0,0);
+background: linear-gradient(27deg, rgba(0,0,0,1) 0%, rgba(38,47,47,1) 99%, rgba(56,66,68,1) 100%); height: 100vh;">
+    <header class="ml-8 md:ml-32">
+        <div class=" text-8xl font-rampart text-amber-400">
+            SkyCast
+        </div>
+    <div class="relative mt-16 flex">
+        <input type="text" id="cityname" class="font-nippo block lg:w-96 sm:w-64 w-56 p-4 pl-10 text-sm text-gray-900 border bg-white border-indigo-950  placeholder-gray-400 text-gray-900 focus:border-blue-700 rounded-lg" placeholder="Search..." required="">
+        <button id="weather" class="ml-5 bg-white p-3 rounded-xl shadow-lg shadow-black">Search</button>
+    </div>
+    </header>
+
+    <div class="py-10 flex flex-wrap w-fit ml-8 mr-8 md:ml-32 md:mr-0 gap-20">
+
+        <!------------------------------------ LEFT DIV ------------------------------------------------->
+        <div class="left">
+            <div class="font-nippo text-8xl text-[#0366da] flex gap-6">
+                <span id="city">MUMBAI</span>   
+            </div>
+            <div class="p-5 border border-gray-950 rounded-xl mt-10 w-fit">
+                <div class="text-[#90caf9] text-2xl font-pt">
+                    Maharashtra
+                    </div>
+                    <div class="mt-5 text-[#90caf9] text-2xl font-pt">
+                    India
+                    </div>
+                    <div class="flex flex-wrap gap-7 mt-5 font-pt text-xl w-fit rounded-lg" style="box-shadow: 10 10 10  black;">
+                        <div class="grid gap-5 mt-2 text-[#90caf9]">
+                            <div>
+                                Latitude: <span class="" id="lat">19.0760° N</span> 
+                            </div>
+                            <div>
+                                Longitude: <span class="" id="lon">72.8777° E</span> 
+                            </div>
+                        </div>
+                        <div class="mt-2 text-[#90caf9] " id="tz">
+                            TimeZone: <span>Asia/Kolkata</span>
+                        </div>
+                    </div>
+            </div> 
+        </div>
+        
+
+        <!------------------------------------ RIGHT DIV ------------------------------------------------->
+        <div class="right font-monteserrat gap-8">
+            <div class=" p-5 rounded-lg bg-[#f5f5f5]  border  border-indigo-950 w-fit">
+                <div class="font-semibold bg-[#0366da] p-3">Current Weather</div>
+                <div class="Weather flex mt-8 font-pt font-semibold flex-wrap">
+                    <div class="num text-6xl mr-10 mb-2 text-[#0366da]" id="temprature">
+                        28°C
+                    </div>
+                    <div class="grid gap-1">
+                        <div id="summary">Mostly Cloud</div>
+                        <div id="feels_like">Feels like 32C</div>
+                    </div>
+                </div>
+                <div class="others flex flex-wrap justify-between font-pt font-medium text-sm sm:text-lg">
+                    <div class="grid gap-0.5 mx-3 my-1">
+                        <div>Pressure</div>
+                        <div class="font-semibold" id="pressure">32</div>
+                    </div>
+                    <div class="grid gap-0.5 mx-3 my-1">
+                        <div>Humidity</div>
+                        <div class="font-semibold" id="humidity">32</div>
+                    </div>
+                    <div class="grid gap-0.5 mx-3 my-1">
+                        <div>Visibility</div>
+                        <div class="font-semibold" id="Visibility">32</div>
+                    </div>
+                </div>
+                <div class="others flex flex-wrap flex-shrink mt-8 font-pt font-medium text-sm sm:text-lg gap-2">
+                    <div class="grid gap-0.5 mx-3 my-1">
+                        <div>Dew Point</div>
+                        <div class="font-semibold" id="dewpoint">32</div>
+                    </div>
+                    <div class="grid gap-0.5 mx-3 my-1">
+                        <div>Wind Chill</div>
+                        <div class="font-semibold" id="windchill">32</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
